@@ -1,0 +1,212 @@
+\documentclass[a4paper,12pt]{jsarticle}
+\usepackage{amsmath,amssymb,layout,enumerate,bm,verbatim}
+% \usepackage{)  ※パッケージ追加用
+\usepackage{ascmac}
+
+%%%%%%%%%
+\usepackage[dvips,dvipdfm]{graphicx}
+
+\setlength{\oddsidemargin}{-15truemm}
+\setlength{\topmargin}{-20truemm}
+\setlength{\textwidth}{49zw}
+\setlength{\textheight}{40\baselineskip}
+\addtolength{\textheight}{\topskip}
+
+\setlength{\headheight}{0zw}
+\setlength{\headsep}{0zw}
+
+% \setlength{\columnseprule}{0.4pt} % 中央の線の太さの設定
+\setlength{\parindent}{0pt}       % 本文の字下げの設定
+% \setlength{\mathindent}{4zw}      % 数式の字下げの設定
+\setlength{\fboxrule}{0.5pt}      % boxの枠の太さ
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\ds}{\displaystyle}
+
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+% \renewcommand{\labelenumi}{(\roman{enumi})}
+% \renewcommand{\labelenumi}{(\theenumi)}
+\renewcommand{\theenumii}{\roman{enumii}}
+
+\newcommand{\p}[2]{{}_{#1}\textrm{P}_{#2}}
+\renewcommand{\c}[2]{{}_{#1}\textrm{C}_{#2}}
+\newcommand{\h}[2]{{}_{#1}\textrm{H}_{#2}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\section*{JJMO演習問題A} %%%%%%%%%%%%%%%%% JJMO問題
+
+\fbox{A1} 
+すべてが等しいわけではない３つの実数$x,y,z$が
+$$ x+\frac{1}{yz} = y+\frac{1}{zx} = z+\frac{1}{xy} $$
+をみたすとき，$x+\dfrac{1}{yz}$の値を求めよ。
+
+\bigskip
+
+\fbox{A2}
+\begin{eqnarray*}
+  \begin{cases}
+    x^{2} + y^{2} = z^{2} \\
+    (x+3)^{2} + (y+4)^{2} = (z+5)^{2} 
+  \end{cases}
+\end{eqnarray*}
+を満たす正の実数$x,y,z$について，$\dfrac{x^{2}}{yz}$の値を求めよ。
+\bigskip
+
+\fbox{A3}
+正の実数$a,b,c$に対し，
+$$ (a^{2}+1)(b^{2}+1)(c^{2}+1) \geq (a+b)(b+c)(c+a) $$
+が成立することを示せ。
+
+\newpage
+
+\section*{JMO演習問題A} %%%%%%%%%%%%%%%%% JMO問題
+
+\bigskip
+
+\fbox{A1} 
+正の実数$a,b,cに対して，$
+$$ \frac {a^{2}+1}{b+c}+\frac {b^{2}+1}{c+a}+\frac {c^{2}+1}{a+b} \ge 3$$
+が成り立つことを示せ。
+
+\bigskip
+
+
+\fbox{A2} 
+正の実数$x,y,z$に対して，
+$$ \frac{x}{(2x+y+z)^{2}}+\frac{y}{(2x+2y+z)^{2}}+\frac{z}{(2x+2y+2z)^{2}} < \frac{1}{2x+2y+2z}$$
+が成り立つことを示せ。
+
+\bigskip
+
+
+\fbox{A3}
+実数に対して定義され実数値をとる関数であって，任意の実数$x,y$について，
+$$ f(x^{4}+f(y)) = f(x)^{4}+y$$
+をみたすものをすべて求めよ。
+\newpage
+
+\section*{JJMO演習問題A ---解答---} %%%%%%%%%%%%%%%%% JJMO解答
+
+\fbox{A1}
+
+$x\neq0, y \neq 0, z \neq 0$のもとで，
+$$ x+\frac{1}{yz} = y+\frac{1}{zx} \Leftrightarrow x-y = \frac{y-x}{xyz} \Leftrightarrow (xyz+1)(x-y) = 0 $$
+同様に，
+$$ (xyz+1)(y-z) = 0,\ (xyz+1)(z-x) = 0 $$
+ここで，$xyz \neq -1$とすると，$x=y=z$となり矛盾。よって，$xyz = -1$。ゆえに，
+$$ x+\frac{1}{yz} = x+(-x) = 0$$
+
+\bigskip
+
+\fbox{A2}
+
+第二式を展開すると，第一式より，
+\begin{eqnarray*}
+  (x+3)^{2} + (y+4)^{2} = (z+5)^{2} & \Leftrightarrow & x^{2}+6x+9 + y^{2}+8y+16 = z^{2}+10z+25 \\
+  & \Leftrightarrow & 3x+4y = 5z
+\end{eqnarray*}
+再び第一式を用いて，
+$$(3x+4y)^{2} = 25z^{2} = 25(x^{2}+y^{2})$$
+ここで，
+\begin{eqnarray*}
+  (3x+4y)^{2} = 25(x^{2}+y^{2}) & \Leftrightarrow & 16x^{2}-24xy+9y^{2} = 0 \\
+  & \Leftrightarrow & (4x-3y)^{2} = 0
+\end{eqnarray*}
+より，$y=\dfrac{4}{3}x$。これを第一式に代入して，$z=\dfrac{5}{3}x$もわかる。ゆえに，
+$$ \frac{x^{2}}{yz} = \frac{x^{2}}{\ \dfrac{4}{3}x\cdot\dfrac{5}{3}x\ } = \frac{9}{20}$$
+
+($\rightarrow$図形的に考えてもできます。)
+\bigskip
+
+\fbox{A3}
+$$(a^{2}+1)(b^{2}+1)-(a+b)^{2} = a^{2}b^{2}-2ab+1 = (ab-1)^{2} \geq 0$$
+などから，
+\begin{eqnarray*}
+  (a^{2}+1)(b^{2}+1) &\geq& (a+b)^{2} \\
+  (b^{2}+1)(c^{2}+1) &\geq& (b+c)^{2} \\
+  (c^{2}+1)(a^{2}+1) &\geq& (c+a)^{2} 
+\end{eqnarray*}
+この三式を辺々かけあわせて，($a,b,c>0$に注意して)ルートをとれば，
+$$ (a^{2}+1)(b^{2}+1)(c^{2}+1) \geq (a+b)(b+c)(c+a) $$
+を得る。
+
+\newpage
+
+\section*{JMO演習問題A ---解答---} %%%%%%%%%%%%%%%%% JMO解答
+
+\fbox{A1}
+
+相加相乗平均の不等式より，$a^{2}+1 \geq 2\sqrt{a^{2}} = 2a$ などが成り立つので，
+$$\frac {a^{2}+1}{b+c}+\frac {b^{2}+1}{c+a}+\frac {c^{2}+1}{a+b} \geq \frac {2a}{b+c}+\frac {2b}{c+a}+\frac {2c}{a+b}$$
+さらにこの右辺について，Engel型のコーシー・シュワルツの不等式より，
+\begin{eqnarray*}
+  \frac {2a}{b+c}+\frac {2b}{c+a}+\frac {2c}{a+b} & = & \frac {a^{2}}{\frac{ab+ac}{2}}+\frac {b^{2}}{\frac{bc+ba}{2}}+\frac {c^{2}}{\frac{ca+cb}{2}} \\
+  & \geq & \frac{(a+b+c)^{2}}{\frac{ab+ac}{2}+\frac{bc+ba}{2}+\frac{ca+cb}{2}} \\
+  & = & \frac{(a+b+c)^{2}}{ab+bc+ca}
+\end{eqnarray*}
+よって，
+$$\frac{(a+b+c)^{2}}{ab+bc+ca} \geq 3$$
+を示せば十分であるが，これは
+$$(a+b+c)^{2}-3(ab+bc+ca) = \frac{1}{2}\{(a-b)^{2}+(b-c)^{2}+(c-a)^{2}\} \geq 0$$
+から直ちに示される。
+\bigskip
+
+
+\fbox{A2}
+
+\begin{eqnarray*}
+  &&\frac{x}{(2x+y+z)^{2}}+\frac{y}{(2x+2y+z)^{2}}+\frac{z}{(2x+2y+2z)^{2}} \\
+  &<& \frac{x}{(x+y+z)(2x+y+z)}+\frac{y}{(2x+y+z)(2x+2y+z)}+\frac{z}{(2z+2y+z)(2x+2y+2z)} \\
+  &=& \frac{1}{x+y+z}-\frac{1}{2x+y+z}+\frac{1}{2x+y+z}-\frac{1}{2x+2y+z}+\frac{1}{2x+2y+z}-\frac{1}{2x+2y+2z} \\
+  &=& \frac{1}{x+y+z}-\frac{1}{2x+2y+2z} = \frac{1}{2x+2y+2z}
+\end{eqnarray*}
+よりよい。
+\bigskip
+
+
+\fbox{A3}
+
+与式において$x$に0を代入して，
+\begin{equation}
+  f(f(y))=f(0)^{4}+y
+\end{equation}
+この右辺は全実数値をとりうるので$f$は全射。ゆえにある$\alpha$が存在して，$f(\alpha)=0$。\\
+また，$f(a)=f(b)$になったと仮定すると，(1)式において$y$に$a,b$をそれぞれ代入して，
+\begin{eqnarray*}
+  f(f(a)) = f(0)^{4}+a \\
+  f(f(b)) = f(0)^{4}+b 
+\end{eqnarray*}
+つまり
+$$f(a)=f(b) \Rightarrow a = b \ \ (fは単射)$$
+
+与式において，$(x,y)\rightarrow(\alpha,\alpha)$として，
+\begin{equation}
+  f(\alpha^{4}+f(\alpha)) = f(\alpha)^{4}+\alpha \Leftrightarrow f(\alpha^{4}) = \alpha
+\end{equation}
+
+与式において，$(x,y)\rightarrow(-\alpha,\alpha)$として，
+\begin{equation}
+  f((-\alpha)^{4}+f(\alpha)) = f(-\alpha)^{4}+\alpha \Leftrightarrow f(\alpha^{4}) = f(-\alpha)^{4}+\alpha
+\end{equation}
+
+(2)(3)より，$f(-\alpha)^{4}=0 \Leftrightarrow f(-\alpha) = 0$。$f(\alpha) = 0$でもあるので，$f$の単射性から，$-\alpha = \alpha \Leftrightarrow \alpha = 0$。つまり，$f(0)=0$であるので，(1)より，
+\begin{equation}
+  f(f(y)) = y
+\end{equation}
+
+与式において，$y$を$f(y)$として，(4)より，
+$$ f(x^{4}+f(f(y))) = f(x)^{4}+f(y) \Leftrightarrow  f(x^{4}+y) = f(x)^{4}+f(y)$$
+ゆえに$f$は狭義単調増加関数である。実際，
+$$z>y \Rightarrow f(z) = f((z-y)+y) = f(\sqrt[4]{z-y}\,)^{4} + f(y) >f(y)$$
+(4)式と合わせて(予習用問題と同じ議論をして)，求める$f$は$f(x)=x$。
+\end{document}
+
+

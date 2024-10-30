@@ -1,0 +1,441 @@
+\documentclass[a4paper,12pt]{jsarticle}
+\usepackage{amsmath,amssymb,layout,enumerate,bm,verbatim}
+% \usepackage{)  ※パッケージ追加用
+\usepackage{ascmac}
+
+%%%%%%%%%
+\usepackage[dvips,dvipdfm]{graphicx}
+
+\setlength{\oddsidemargin}{-15truemm}
+\setlength{\topmargin}{-20truemm}
+\setlength{\textwidth}{49zw}
+\setlength{\textheight}{40\baselineskip}
+\addtolength{\textheight}{\topskip}
+
+\setlength{\headheight}{0zw}
+\setlength{\headsep}{0zw}
+
+% \setlength{\columnseprule}{0.4pt} % 中央の線の太さの設定
+\setlength{\parindent}{0pt}       % 本文の字下げの設定
+% \setlength{\mathindent}{4zw}      % 数式の字下げの設定
+\setlength{\fboxrule}{0.5pt}      % boxの枠の太さ
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\ds}{\displaystyle}
+
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+% \renewcommand{\labelenumi}{(\roman{enumi})}
+% \renewcommand{\labelenumi}{(\theenumi)}
+\renewcommand{\theenumii}{\roman{enumii}}
+
+\newcommand{\p}[2]{{}_{#1}\textrm{P}_{#2}}
+\renewcommand{\c}[2]{{}_{#1}\textrm{C}_{#2}}
+\newcommand{\h}[2]{{}_{#1}\textrm{H}_{#2}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\section*{事前演習問題A} %%%%%%%%%%%%%%%%% JJMO問題
+
+\fbox{A1} (基礎)
+
+\begin{enumerate}
+\item 
+10101010101を1000以上の２つの自然数の積で表せ。
+
+\item 
+実数$x,y$が$(x+\sqrt{1+x^2})(y+\sqrt{1+y^2})=1$をみたすとき$x+y$の値を求めよ。 
+
+\end{enumerate}
+
+\bigskip
+
+\fbox{A2} (標準)
+
+\begin{enumerate}
+\item 
+  \begin{enumerate}
+  \item $(pr+qs)^{2} + (ps-qr)^{2} = (p^{2}+q^{2})(r^{2}+s^{2})$\ を示せ。
+  \item \vspace{0.5zw}
+  {\small $\ds \frac{(2^{2} + 2 - 1 )^{2} + ( 2 \cdot 2 + 1 )^{2}}{(1^{2} + 1 - 1 )^{2} + ( 2 \cdot 1 + 1 )^{2}} \cdot \frac{(4^{2} + 4 - 1 )^{2} + ( 2 \cdot 4 + 1 )^{2}}{(3^{2} + 3 - 1 )^{2} + ( 2 \cdot 3 + 1 )^{2}} \cdot \frac{(6^{2} + 6 - 1 )^{2} + ( 2 \cdot 6 + 1 )^{2}}{(5^{2} + 5 - 1 )^{2} + ( 2 \cdot 5 + 1 )^{2}} \cdot \  \\ \hfill \cdots \ \cdot \frac{(14^{2} + 14 - 1 )^{2} + ( 2 \cdot 14 + 1 )^{2}}{(13^{2} + 13 - 1 )^{2} + ( 2 \cdot 13 + 1 )^{2}}\cdot \frac{(16^{2} + 16 - 1 )^{2} + ( 2 \cdot 16 + 1 )^{2}}{(15^{2} + 15 - 1 )^{2} + ( 2 \cdot 15 + 1 )^{2}}$}\\
+の値を求めよ。
+  \end{enumerate}
+  
+\item 
+以下の連立方程式を満たす実数$x,y,z$の組をすべて求めよ。
+\begin{equation}
+  \left\{
+    \begin{alignedat}{4}
+      x^{2} + 9  =&\ &  & \  &   2y & \ &+ &\,2z   \\ 
+      y^{2} + 4  =&  &x &    &+\,2y &   &+ &\,z   \\
+      z^{2} + 1  =&  &x &    &      &   &+ &\,3z  \nonumber
+    \end{alignedat}
+  \right.
+\end{equation}
+
+\end{enumerate}
+
+\fbox{A3} (応用)
+
+\begin{enumerate}
+\item 
+  \begin{enumerate}
+  \item $a(x-2)^{2}+b(x-2)+c$ を展開せよ。
+  \item 実数の組$(p,q,r)$について，$(p,q,r)を(p,-4p+q,4p-2q+r)$に変える操作を$A$，$(p,q,r)を(p+q+r,2p+q,p)$に変える操作を$B$とする。例えば$(1,2,3)$に操作$B$を行うと$(6,4,1)$となり，さらに操作$A$を行うと$(6,-20,17)$となる。$(1,1,1)$に操作$A,B$を何度か行うことで$(0,0,2017)$に変えることができるか。できるならばその方法を示し，できないならばそれを証明せよ。
+  \end{enumerate}
+\item 
+  \begin{enumerate}
+  \item 実数$x,y,z$に対して，
+    $$ (x+y+z)^{2} \geq (2x+z)(2y+z) $$
+  が成り立つことを示せ。
+  \item 正の実数$a,b,c$に対して，
+    $$ (2a+b+c)(a+2b+c)(a+b+2c) \geq (3a+b)(3b+c)(3c+a) $$
+  が成り立つことを示せ。
+  \end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\section*{事前演習問題A} %%%%%%%%%%%%%%%%% JMO問題
+
+\fbox{A1} (基礎)
+
+\begin{enumerate}
+\item 
+以下の連立方程式を満たす実数$x,y,z$の組をすべて求めよ。
+\begin{eqnarray}
+  \left\{
+    \begin{array}{l}
+      x^{4} + 6y^{2} + 1 = 4(z^{3} + z)\vspace{0.5zw} \\ 
+      y^{4} + 6z^{2} + 1 = 4(x^{3} + x) \vspace{0.5zw} \\
+      z^{4} + 6x^{2} + 1 = 4(y^{3} + y) \nonumber
+    \end{array}
+  \right.
+\end{eqnarray}
+
+\item \vspace{0.5zw}
+実数$x,y$が$(x+\sqrt{1+x^2})(y+\sqrt{1+y^2})=1$をみたすとき$x+y$の値を求めよ。
+\end{enumerate}
+
+\bigskip
+
+\fbox{A2} (標準)
+
+\begin{enumerate}
+\item 
+以下の連立方程式を解け。
+\begin{eqnarray}
+  \left\{
+    \begin{array}{l}
+      \dfrac{y}{x+y} = x+2018 \vspace{0.5zw} \\ 
+      \dfrac{y}{2x+y+1} = 2x+2019 \vspace{0.5zw} \\
+      \dfrac{y}{3x+y+2} = 3x+2020 \nonumber
+    \end{array}
+  \right.
+\end{eqnarray}
+
+\item \vspace{0.5zw}
+  {\small $\ds \frac{(2^{2} + 2 - 1 )^{2} + ( 2 \cdot 2 + 1 )^{2}}{(1^{2} + 1 - 1 )^{2} + ( 2 \cdot 1 + 1 )^{2}} \cdot \frac{(4^{2} + 4 - 1 )^{2} + ( 2 \cdot 4 + 1 )^{2}}{(3^{2} + 3 - 1 )^{2} + ( 2 \cdot 3 + 1 )^{2}} \cdot \frac{(6^{2} + 6 - 1 )^{2} + ( 2 \cdot 6 + 1 )^{2}}{(5^{2} + 5 - 1 )^{2} + ( 2 \cdot 5 + 1 )^{2}} \cdot \  \\ \hfill \cdots \ \cdot \frac{(14^{2} + 14 - 1 )^{2} + ( 2 \cdot 14 + 1 )^{2}}{(13^{2} + 13 - 1 )^{2} + ( 2 \cdot 13 + 1 )^{2}}\cdot \frac{(16^{2} + 16 - 1 )^{2} + ( 2 \cdot 16 + 1 )^{2}}{(15^{2} + 15 - 1 )^{2} + ( 2 \cdot 15 + 1 )^{2}}$}\\
+の値を求めよ。
+
+\item 
+実数に対して定義され実数値をとる狭義単調増加関数$(p<q\Rightarrow f(p)<f(q))$であって，任意の実数$x$に対して，
+  $$ f(f(f(x))) = x $$
+が成り立つものをすべて求めよ。
+
+\item 
+実数$x,y$が$(x+\sqrt{1+y^2})(y+\sqrt{1+x^2})=1$をみたすとき$x+y$の値を求めよ。 
+\end{enumerate}
+
+\fbox{A3} (応用)
+
+\begin{enumerate}
+\item 
+  \begin{enumerate}
+  \item
+  正の実数$a,b,c$について，
+    $$ \frac{a^{2}}{b} + \frac{b^{2}}{c} + \frac{c^{2}}{a} \geq a + b + c $$
+  が成り立つことを示せ。
+  \item 
+  正の実数$a,b,c$について，
+    $$ \frac{a^{4}}{b^{3}} + \frac{b^{4}}{c^{3}} + \frac{c^{4}}{a^{3}} \geq \frac{a^{2}}{b} + \frac{b^{2}}{c} + \frac{c^{2}}{a} $$
+  が成り立つことを示せ。
+  \end{enumerate}
+\item 
+実数に対して定義され実数値をとる関数$f$であって，任意の実数$x,y$に対して，
+  $$ f(x+f(y)) = f(f(x)-y) + 2y $$
+が成り立つものをすべて求めよ。
+\end{enumerate}
+
+\newpage
+
+\section*{JJMO事前演習問題A ---解答---} %%%%%%%%%%%%%%%%% JJMO解答
+
+\fbox{A1}
+
+\begin{enumerate}
+\item 
+10101010101を$x$とすると，
+  $$ 99x = 999999999999 = 10^{12}-1 = (10^{6}-1)(10^{6}+1) = 999999 \times 1000001$$
+よって，
+  $$ x= \frac{999999}{99} \times 1000001 = 10101 \times 1000001$$
+が答の一例。
+\item 
+$(x-\sqrt{1+x^{2}})(x+\sqrt{1+x^2}) = -1$に注意して，与式の両辺に\ $x-\sqrt{1+x^{2}}$\ をかけると，
+$$ -(y+\sqrt{1+y^{2}}) = x-\sqrt{1+x^{2}} \ \Leftrightarrow \ x+y = \sqrt{1+x^{2}} - \sqrt{1+y^{2}} $$
+同様に，与式の両辺に\ $y-\sqrt{1+y^{2}}$\ をかけると，
+$$ -(x+\sqrt{1+x^{2}}) = y-\sqrt{1+y^{2}} \ \Leftrightarrow \ x+y = -\sqrt{1+x^{2}} + \sqrt{1+y^{2}} $$
+ゆえに，
+$$ x+y = 0 $$
+\end{enumerate}
+
+\bigskip
+
+\fbox{A2}
+
+\begin{enumerate}
+\item 
+  \begin{enumerate}
+  \item 
+  左辺右辺ともに展開すれば\ $p^{2}r^{2} + q^{2}s^{2} + p^{2}s^{2} + q^{2}r^{2}$\ になる。
+  \item (i)において，$p = n+1 ,q = -1 ,r = n ,s = 1$を代入して，
+  $$ (n^{2} + n -1)^{2} + (2n + 1)^{2} = (n^{2} + 1) \left\{( n + 1 )^{2} + 1 \right\} $$
+  これを用いれば，$f(n) = n^{2} + 1$として，
+  \begin{eqnarray} (与式) & = & \frac{f(2)f(3)}{f(1)f(2)} \cdot \frac{f(4)f(5)}{f(3)f(4)} \cdot \frac{f(6)f(7)}{f(5)f(6)} \cdot \ \cdots \ \cdot \frac{f(14)f(15)}{f(13)f(14)} \cdot \frac{f(16)f(17)}{f(15)f(16)} \nonumber \\
+  & = & \frac{f(17)}{f(1)} = \frac{17^{2}+1}{1^{2}+1} = 145 \nonumber
+  \end{eqnarray}
+
+  \end{enumerate}
+
+\item
+与えられた三式をすべて足すと，
+  $$ x^{2}+y^{2}+z^{2}+1+4+9 = 2x + 4y + 6z \ \Leftrightarrow \ (x-1)^{2} + (y-2)^{2} + (z-3)^{2} = 0 $$
+実数を二乗して得られる値は必ず0以上なので，これが成り立つためには，
+  $$ x-1 = y-2 = z-3 =0 \ \Leftrightarrow\ (x,y,z) = (1,2,3)$$
+が必要。逆に$(x,y,z) = (1,2,3)$が元の連立方程式を満たすことはすぐに確かめられる。
+
+
+\end{enumerate}
+
+\fbox{A3}
+\begin{enumerate}
+\item 
+  \begin{enumerate}
+  \item
+    $$ a(x-2)^{2}+b(x-2)+c = ax^{2} + (-4a+b)x + 4a-2b+c$$
+  \item
+  それぞれの操作で$q^{2}-4pr$が不変であることに注意する。実際，
+    $$(-4p+q)^{2} - 4p(4p-2q+r) = q^{2}-4pr$$
+    $$(2p+q)^{2} - 4(p+q+r)p = q^{2}-4pr$$
+  問題文の具体例$(1,2,3)\xrightarrow[]{B} (6,4,1) \xrightarrow[]{A} (6,-20,17)$の場合だと，確かに
+    $$ 2^{2}-4\cdot 1\cdot 3 = 4^{2}-4\cdot 6\cdot 1 = (-20)^{2}-4\cdot 6\cdot 17 \ \ (= -8)$$
+  となっている。ここで，
+    $$1^{2}-4\cdot 1\cdot 1 \neq 0^{2}-4\cdot 0\cdot 2017$$
+  であるので，$(1,1,1)\rightarrow \cdots \rightarrow (0,0,2017)$とすることはできない。
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \item 
+    $$ (x+y+z)^{2} - (2x+z)(2y+z) = x^{2} + 2xy + y^{2} - 4xy = (x-y)^{2} \geq 0$$
+  よりよい。
+  \item
+  (i)において，$(x,y,z) = (a,b,b+c)$とすれば，
+    $$ (a+2b+c)^{2} \geq (2a+b+c)(3b+c) $$
+  同様にして，$(x,y,z) = (b,c,c+a)，(c,a,a+b)$とすれば，
+    $$ (a+b+2c)^{2} \geq (a+2b+c)(3c+a) $$
+    $$ (2a+b+c)^{2} \geq (a+b+2c)(3a+b) $$
+  これら三式を辺々かけて，
+    $$ (2a+b+c)^{2}(a+2b+c)^{2}(a+b+2c)^{2} \geq (3a+b)(3b+c)(3c+a)(2a+b+c)(a+2b+c)(a+b+2c)$$
+  両辺$(2a+b+c)(a+2b+c)(a+b+2c)>0$で割れば，
+    $$ (2a+b+c)(a+2b+c)(a+b+2c) \geq (3a+b)(3b+c)(3c+a) $$
+  を得る。
+  \end{enumerate}
+ 
+\end{enumerate}
+
+\newpage
+
+\section*{JMO事前演習問題A ---解答---} %%%%%%%%%%%%%%%%% JMO解答
+
+\fbox{A1}
+\begin{enumerate}
+
+\item 
+３式を辺々足して整理すると，
+  $$ (x-1)^{4} + (y-1)^{4} + (z-1)^{4} = 0 $$
+$x,y,z$が実数のとき左辺の各項は0以上であることに注意して，$(x,y,z)=(1,1,1)$に限られる。逆に$(x,y,z)=(1,1,1)$は与方程式を満たすのでこれが求めるものである。
+
+\item 
+$(x-\sqrt{1+x^{2}})(x+\sqrt{1+x^2}) = -1$に注意して，与式の両辺に\ $x-\sqrt{1+x^{2}}$\ をかけると，
+$$ -(y+\sqrt{1+y^{2}}) = x-\sqrt{1+x^{2}} \ \Leftrightarrow \ x+y = \sqrt{1+x^{2}} - \sqrt{1+y^{2}} $$
+同様に，与式の両辺に\ $y-\sqrt{1+y^{2}}$\ をかけると，
+$$ -(x+\sqrt{1+x^{2}}) = y-\sqrt{1+y^{2}} \ \Leftrightarrow \ x+y = -\sqrt{1+x^{2}} + \sqrt{1+y^{2}} $$
+ゆえに，
+$$ x+y = 0 $$
+\end{enumerate}
+
+\bigskip
+
+
+\fbox{A2}
+
+\begin{enumerate}
+\item 
+与式を満たす$(x,y)$について，$\alpha = x , \beta = 2x+1 , \gamma = 3x+2$とすれば，
+\begin{eqnarray}
+  \left\{
+    \begin{array}{l}
+      \dfrac{y}{\alpha+y} = \alpha+2018 \vspace{0.5zw} \\ 
+      \dfrac{y}{\beta+y} = \beta+2018 \vspace{0.5zw} \\
+      \dfrac{y}{\gamma+y} = \gamma+2018  \\\nonumber
+    \end{array}
+  \right.
+  \ \Rightarrow \  \left\{
+    \begin{array}{l}
+      \alpha^{2} + (y+2018)\alpha + 2017y = 0 \vspace{0.5zw} \\ 
+      \beta^{2} + (y+2018)\beta + 2017y = 0 \vspace{0.5zw} \\
+      \gamma^{2} + (y+2018)\gamma + 2017y = 0  \nonumber
+    \end{array}
+  \right.
+\end{eqnarray}
+すなわち，$\alpha,\beta,\gamma$は$t$についての二次方程式$t^{2}+(y+2018)t+2017y=0$の解である。ここで二次方程式の解は高々２つしか存在しないので$\alpha,\beta,\gamma$のうち少なくとも２つは等しいことがわかり，$\alpha=\beta,\beta=\gamma,\gamma=\alpha$,いずれの場合も$x=-1$を得る。$x=-1$を与式に代入して，
+$$ \frac{y}{y-1} = 2017 \Leftrightarrow y = \frac{2017}{2016} $$ 
+ゆえに，$(x,y) = \left(-1,\,\dfrac{2017}{2016}\right)$であり，これはたしかに与式を満たす。
+
+\item 
+  $$ (n^{2} + n -1)^{2} + (2n + 1)^{2} = (n^{2} + 1) \left\{( n + 1 )^{2} + 1 \right\} $$
+であるので，$f(n) = n^{2} + 1$として，
+\begin{eqnarray} (与式) & = & \frac{f(2)f(3)}{f(1)f(2)} \cdot \frac{f(4)f(5)}{f(3)f(4)} \cdot \frac{f(6)f(7)}{f(5)f(6)} \cdot \ \cdots \ \cdot \frac{f(14)f(15)}{f(13)f(14)} \cdot \frac{f(16)f(17)}{f(15)f(16)} \nonumber \\
+& = & \frac{f(17)}{f(1)} = \frac{17^{2}+1}{1^{2}+1} = 145 \nonumber
+\end{eqnarray}
+
+\item
+ある$y$について，$y<f(y)$となったと仮定すると，$f$の単調増加性$(p<q\Rightarrow f(p)<f(q))$から，
+  $$ f(y)<f(f(y)) $$
+  $$ f(f(y))< f(f(f(y))) $$
+このとき，
+  $$ y<f(y)<f(f(y))<f(f(f(y)))=y$$
+となり，矛盾。同様に$y>f(y)$となったと仮定すると，$y>f(y)>f(f(y))>f(f(f(y)))=y$となり，矛盾。ゆえに任意の$x$について，$f(x)=x$。逆に$f(x)=x$が題意を満たすことはすぐに分かる。
+
+\item
+実数$x,y$について，$\ds x = \frac{s-s^{-1}}{2}，y = \frac{t-t^{-1}}{2}なる正の実数s,t$がただ一つ存在する。(グラフを書けばわかる。)これらの$s,t>0$に対して，
+  $$ \sqrt{1+\left(\frac{s-s^{-1}}{2}\right)^{2}} = \frac{s+s^{-1}}{2}，\ \ \sqrt{1+\left(\frac{t-t^{-1}}{2}\right)^{2}} = \frac{t+t^{-1}}{2}$$
+に注意すれば，
+\begin{eqnarray*}
+  (x+\sqrt{1+y^2})(y+\sqrt{1+x^2}) = 1 &\Leftrightarrow& \left( \frac{s-s^{-1}}{2} + \frac{t+t^{-1}}{2} \right) \left( \frac{t-t^{-1}}{2} + \frac{s+s^{-1}}{2} \right) = 1 \\
+  &\Leftrightarrow& \left( s+t-\frac{1}{s}+\frac{1}{t} \right) \left( s+t+\frac{1}{s}-\frac{1}{t} \right) = 4 \\
+  &\Leftrightarrow& s^{2}t^{2}(s+t)^{2} - (t-s)^{2} = 4s^{2}t^{2} \\
+  &\Leftrightarrow& (st-1) \bigl\{ (s+t)^{2}st + (s-t)^{2} \bigr\} = 0 \\
+  &\Leftrightarrow& st = 1 \qquad (\ \because (s+t)^{2}st + (s-t)^{2}>0)
+\end{eqnarray*}
+ゆえに，
+  $$ x+y = \frac{s-s^{-1}}{2} + \frac{t-t^{-1}}{2} = \frac{s-t}{2} + \frac{t-s}{2} = 0$$
+\end{enumerate}
+
+\fbox{A3}
+
+\begin{enumerate}
+\item 
+
+  \begin{enumerate}
+  \item
+  コーシー・シュワルツの不等式より，
+    $$ \left(\frac{a^{2}}{b} + \frac{b^{2}}{c} + \frac{c^{2}}{a}\right)(b+c+a) \geq \left(\sqrt{\frac{a^{2}}{b}\cdot b} + \sqrt{\frac{b^{2}}{c}\cdot c} + \sqrt{\frac{c^{2}}{a}\cdot a}\right)^{2} = (a+b+c)^{2} $$
+  両辺を$a+b+c>0$で割って，
+    $$ \frac{a^{2}}{b} + \frac{b^{2}}{c} + \frac{c^{2}}{a} \geq a + b + c $$
+  を得る。\\
+
+  \hspace{-1.5zw} (別解1)\\
+  Engel型のコーシー・シュワルツの不等式より，
+    $$ \frac{a^{2}}{b} + \frac{b^{2}}{c} + \frac{c^{2}}{a} \geq \frac{(a+b+c)^{2}}{b+c+a} = a + b + c $$ \\
+
+  \hspace{-1.5zw} (別解2)\\
+  相加相乗平均の不等式より，
+    $$ \frac{\dfrac{a^{2}}{b}+\dfrac{a^{2}}{b}+\dfrac{a^{2}}{b}+\dfrac{a^{2}}{b}+\dfrac{b^{2}}{c}+\dfrac{b^{2}}{c}+\dfrac{c^{2}}{a}}{7} \geq \sqrt[7]{\dfrac{a^{2}}{b}\dfrac{a^{2}}{b}\dfrac{a^{2}}{b}\dfrac{a^{2}}{b}\dfrac{b^{2}}{c}\dfrac{b^{2}}{c}\dfrac{c^{2}}{a}} = a $$
+  同様にして，
+  \begin{eqnarray}
+  \frac{\dfrac{b^{2}}{c}+\dfrac{b^{2}}{c}+\dfrac{b^{2}}{c}+\dfrac{b^{2}}{c}+\dfrac{c^{2}}{a}+\dfrac{c^{2}}{a}+\dfrac{a^{2}}{b}}{7} \geq b \nonumber \\
+\frac{\dfrac{c^{2}}{a}+\dfrac{c^{2}}{a}+\dfrac{c^{2}}{a}+\dfrac{c^{2}}{a}+\dfrac{a^{2}}{b}+\dfrac{a^{2}}{b}+\dfrac{b^{2}}{c}}{7} \geq c \nonumber
+  \end{eqnarray}
+  上３式を足せば，
+    $$ \frac{a^{2}}{b} + \frac{b^{2}}{c} + \frac{c^{2}}{a} \geq a + b + c $$
+を得る。\\
+
+\hspace{-1.5zw} (別解3)\\
+相加相乗平均の不等式より，
+  $$ \frac{a^{2}}{b} + b \geq 2\sqrt{\frac{a^{2}}{b}\cdot b} = 2a \hspace{3zw} \therefore \ \frac{a^{2}}{b} \geq  2a - b $$ 
+同様にして，
+\begin{eqnarray}
+\frac{b^{2}}{c} \geq  2b - c \nonumber\\
+\frac{c^{2}}{a} \geq  2c - a \nonumber
+\end{eqnarray}
+上３式を足せば，
+  $$ \frac{a^{2}}{b} + \frac{b^{2}}{c} + \frac{c^{2}}{a} \geq a + b + c $$
+  を得る。\\
+
+  \item 
+  Engel型のコーシー・シュワルツの不等式より，
+    $$ \frac{a^{4}}{b^{3}} + \frac{b^{4}}{c^{3}} + \frac{c^{4}}{a^{3}} = \frac{\left(\dfrac{a^{2}}{b}\right)^{2}}{b} + \frac{\left(\dfrac{b^{2}}{c}\right)^{2}}{c} + \frac{\left(\dfrac{c^{2}}{a}\right)^{2}}{a} \geq \frac{\left(\dfrac{a^{2}}{b} + \dfrac{b^{2}}{c} + \dfrac{c^{2}}{a}\right)^{2}}{b+c+a} $$
+  さらにこの右辺について，(1)より，
+    $$ \frac{\left(\dfrac{a^{2}}{b} + \dfrac{b^{2}}{c} + \dfrac{c^{2}}{a}\right)^{2}}{b+c+a} \geq \frac{\left(\dfrac{a^{2}}{b} + \dfrac{b^{2}}{c} + \dfrac{c^{2}}{a}\right)(a+b+c)}{b+c+a} = \dfrac{a^{2}}{b} + \dfrac{b^{2}}{c} + \dfrac{c^{2}}{a} $$
+  となるのでよい。
+  \end{enumerate}
+
+\item 
+与式において，$x$に$-f(y)$を代入して，
+$$ f(-f(y)+f(y)) = f\bigl(f(-f(y))-y\bigr) + 2y \ \Leftrightarrow \ f\bigl(f(-f(y))-y\bigr) = 2y - f(0)$$
+$y$が実数全体を動くとき，右辺の$2y-f(0)$も実数全体を動くので$f$は全射(任意の実数$s$について，$f(t)=s$なる実数$t$が存在する)。ゆえに，ある実数$\alpha$が存在して$f(\alpha)=0$。\\
+さらに，与式において$y$に$\alpha$を代入して，
+  $$ f(x+f(\alpha)) = f(f(x)-\alpha) + 2\alpha \ \Leftrightarrow \ f(x) - \alpha - \alpha= f(f(x)-\alpha)$$
+ここで$f$の全射性から$x$が全実数を動くとき$f(x)-\alpha$も全実数を動くので，これを$z$と置き換えて，
+$$ 任意の実数zについて，z - \alpha = f(z)$$
+がわかる。すなわち，題意を満たす$f$は$c$を定数として，$f(x)=x+c$の形に限られる。逆に$f(x)=x+c$が与式を満たすことはすぐにわかるのでこれが求めるものである。
+\end{enumerate}
+\vfil
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%おまけ
+(参考)
+\begin{itembox}[l]{重み付き相加相乗平均の不等式}
+$p_{1},p_{2},\,\cdots ,p_{n} > 0 $が$p_{1}+p_{2}+\dots + p_{n} =1$をみたすとき，任意の$a_{1},a_{2},\cdots ,a_{n} > 0 $について，
+\begin{equation}
+p_{1}a_{1} + p_{2}a_{2} + \cdots + p_{n}a_{n} \geq a_{1}^{p_{1}}  a_{2}^{p_{2}}  \cdots a_{n}^{p_{n}} \nonumber
+\end{equation}
+\end{itembox}\\
+
+\begin{itembox}[l]{コーシー・シュワルツの不等式}
+実数$a_{1},a_{2},\cdots ,a_{n} , \,b_{1},b_{2},\cdots ,b_{n}$ について，
+\begin{equation}
+ (a_{1}^{2} + a_{2}^{2} + \cdots + a_{n}^{2})(b_{1}^{2} + b_{2}^{2} + \cdots + b_{n}^{2}) \geq (a_{1}b_{1} + a_{2}b_{2} + \cdots + a_{n}b_{n})^{2}  \nonumber
+\end{equation}
+\end{itembox}\\
+
+\begin{itembox}[l]{有用な不等式(Engel型コーシー・シュワルツ)}
+正の実数$a_{1},a_{2},\cdots ,a_{n} , \,x_{1},x_{2},\cdots ,x_{n}$ について，
+\begin{equation}
+ \frac{x_{1}^{2}}{a_{1}} + \frac{x_{2}^{2}}{a_{2}} + \cdots +\frac{x_{n}^{2}}{a_{n}} \geq \frac{(x_{1}+x_{2}+ \cdots +x_{n})^{2}}{a_{1}+a_{2}+ \cdots +a_{n}} \nonumber
+\end{equation}
+\end{itembox}
+
+※ コーシー・シュワルツの不等式と(ほとんど)同値。実際，コーシー・シュワルツの不等式において，
+
+$\ds a_{i} \rightarrow \sqrt{\frac{x_{i}^{2}}{{a_{i}}}} \ , \  b_{i} \rightarrow \sqrt{a_{i}}\nonumber
+$
+とすれば，Engel型が得られる。\\
+
+(その他) 
+
+凸不等式，ヘルダー(H\"older)の不等式，シューア(Schur)の不等式，並び替え不等式，チェビシェフ(Chebyshev)の不等式，べき平均不等式，ミンコフスキー(Minkowski)の不等式
+\end{document}
+
+
